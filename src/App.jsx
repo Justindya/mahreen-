@@ -151,8 +151,8 @@ const RealisticMarkerStroke = () => (
 
 // --- Transition Components ---
 const InterstitialScreen = ({ targetSlide }) => {
-  const slideLabel = targetSlide === 1 ? "SLIDE 1" : targetSlide === 2 ? "SLIDE 2" : targetSlide === 3 ? "SLIDE 3" : targetSlide === 4 ? "SLIDE 4" : "SLIDE 5";
-  const rawText = targetSlide === 1 ? "COVER SLIDE" : targetSlide === 2 ? "MASALAHNYA" : targetSlide === 3 ? "SOLUSINYA" : targetSlide === 4 ? "BUKTI NYATA" : "AMBIL PERANMU";
+  const slideLabel = targetSlide === 1 ? "SLIDE 1" : targetSlide === 2 ? "SLIDE 2" : targetSlide === 3 ? "SLIDE 3" : targetSlide === 4 ? "SLIDE 4" : targetSlide === 5 ? "SLIDE 5" : "SLIDE 6";
+  const rawText = targetSlide === 1 ? "COVER SLIDE" : targetSlide === 2 ? "MASALAHNYA" : targetSlide === 3 ? "SOLUSINYA" : targetSlide === 4 ? "BUKTI NYATA" : targetSlide === 5 ? "AMBIL PERANMU" : "EKSEKUSI NYATA";
 
   const mouseX = useMotionValue(typeof window !== 'undefined' ? window.innerWidth / 2 - 22 : 0);
   const mouseY = useMotionValue(typeof window !== 'undefined' ? window.innerHeight - 100 : 0);
@@ -517,7 +517,7 @@ const Slide1 = () => {
           style={{ marginTop: '54px' }}
         >
           <p className="font-medium text-black text-sm md:text-base lg:text-lg tracking-wide leading-relaxed m-0 p-0">
-            EKOSISTEM TALENTA DAN KARYA YANG FOKUS MEMBERIKAN{' '}
+            EKOSISTEM KREATIF DAN DIGITAL UNTUK GENERASI MUDA BERKARYA{' '}
             <span
               className="relative inline-block text-black font-semibold"
               style={{ padding: '2px 8px', margin: '0 2px' }}
@@ -529,11 +529,11 @@ const Slide1 = () => {
               >
                 <RealisticMarkerStroke />
               </motion.div>
-              <span className="relative z-10">DAMPAK NYATA</span>
-            </span>,
+              <span className="relative z-10">NYATA</span>
+            </span>
           </p>
           <p className="font-medium text-black text-sm md:text-base lg:text-lg tracking-wide leading-relaxed mt-1">
-            BUKAN WACANA.
+            BAGI INDONESIA.
           </p>
         </div>
       </div>
@@ -541,28 +541,7 @@ const Slide1 = () => {
   );
 };
 
-const EraserOrnament = () => (
-  <svg
-    width="400"
-    height="400"
-    viewBox="0 0 200 200"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className="absolute -top-[60px] -right-[60px] z-0 hidden md:block pointer-events-none drop-shadow-[15px_20px_25px_rgba(0,0,0,0.2)] rotate-45"
-  >
-    <g transform="translate(10, 40) rotate(-10)">
-      {/* Side depth (Darker Pink) */}
-      <path d="M45 60 L145 60 A 10 10 0 0 1 155 70 L140 100 A 10 10 0 0 1 130 110 L30 110 A 10 10 0 0 1 20 100 L35 70 A 10 10 0 0 1 45 60 Z" fill="#D05070" />
-      {/* Front Side Lines */}
-      <path d="M20 100 A 10 10 0 0 0 30 110 L130 110 A 10 10 0 0 0 140 100" fill="none" stroke="#111827" strokeWidth="4" strokeLinecap="round" />
-      <line x1="30" y1="80" x2="20" y2="100" stroke="#111827" strokeWidth="4" strokeLinecap="round" />
-      <line x1="150" y1="80" x2="140" y2="100" stroke="#111827" strokeWidth="4" strokeLinecap="round" />
 
-      {/* Top Face (Soft Pink) */}
-      <path d="M55 40 L155 40 A 10 10 0 0 1 165 50 L150 80 A 10 10 0 0 1 140 90 L40 90 A 10 10 0 0 1 30 80 L45 50 A 10 10 0 0 1 55 40 Z" fill="#FF8BA7" stroke="#111827" strokeWidth="4" strokeLinejoin="round" />
-    </g>
-  </svg>
-);
 
 // --- SLIDE 2 ---
 const Slide2 = () => {
@@ -579,8 +558,6 @@ const Slide2 = () => {
     >
 
       {/* PHASE 2: CONTENT */}
-      {/* Ornaments for Slide 2 */}
-      <EraserOrnament />
 
       <div
         className="flex-grow flex flex-col items-center justify-center w-full z-10"
@@ -600,51 +577,47 @@ const Slide2 = () => {
               ))}
             </div>
           </div>
-          {/* Subtext */}
-          <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-800 font-sans">
-            MASALAHNYA
-          </p>
         </div>
 
         {/* Core Problem Statement (Center) */}
         <div
           className="flex flex-col items-center text-center w-full max-w-7xl px-4 gap-2 md:gap-4 uppercase text-black font-black"
-          style={{ fontFamily: "'Titan One', cursive, sans-serif", fontSize: "clamp(1.8rem, 3.2vw, 2.8rem)", lineHeight: "1.15" }}
+          style={{ fontFamily: "'Titan One', cursive, sans-serif", fontSize: "clamp(1.2rem, 2.2vw, 2.2rem)", lineHeight: "1.15" }}
         >
           <div className="z-10">
             SETIAP HARI, RIBUAN PELUANG DIBUAT
           </div>
-          <div className="z-10">
-            TAPI BANYAK YANG <span className="relative inline-block px-2 py-0.5">
+          <div className="z-10 mt-1 md:mt-2">
+            TAPI BANYAK GAGASAN HANYA <span className="relative inline-block px-2 py-0.5">
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
                 className="absolute inset-0 bg-[#CCFF00] rounded-sm origin-left z-0"
               />
-              <span className="relative z-10">MELEWATKAN,</span>
+              <span className="relative z-10">BERHENTI DI ANGAN-ANGAN,</span>
             </span>
           </div>
           <div className="z-10 mt-1 md:mt-2">
-            BANYAK YANG <span className="relative inline-block px-2 py-0.5">
+            BANYAK TALENTA BINGUNG MENEMUKAN <span className="relative inline-block px-2 py-0.5">
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.5, delay: 0.6, ease: [0.25, 1, 0.5, 1] }}
                 className="absolute inset-0 bg-[#CCFF00] rounded-sm origin-left z-0"
               />
-              <span className="relative z-10">BINGUNG MEMULAI,</span>
-            </span> DAN
+              <span className="relative z-10">WADAH KOLABORASI,</span>
+            </span>
           </div>
           <div className="z-10 mt-1 md:mt-2">
-            KARYA HANYA <span className="relative inline-block px-2 py-0.5">
+            DAN KARYA HEBAT HANYA BERAKHIR <span className="relative inline-block px-2 py-0.5">
               <motion.span
                 initial={{ scaleX: 0 }}
                 animate={{ scaleX: 1 }}
                 transition={{ duration: 0.5, delay: 0.9, ease: [0.25, 1, 0.5, 1] }}
                 className="absolute inset-0 bg-[#CCFF00] rounded-sm origin-left z-0"
               />
-              <span className="relative z-10">BERAKHIR WACANA.</span>
+              <span className="relative z-10">MENJADI WACANA.</span>
             </span>
           </div>
         </div>
@@ -694,14 +667,11 @@ const Slide3 = () => {
               ))}
             </div>
           </div>
-          {/* Subtext */}
-          <p className="text-xs font-bold tracking-[0.4em] uppercase text-gray-800 font-sans">
-            SOLUSINYA
-          </p>
+
         </div>
 
         <h2 className="text-2xl md:text-4xl lg:text-5xl font-black text-black uppercase mb-12 text-center" style={{ fontFamily: "'Titan One', cursive, sans-serif" }}>
-          PILIH PERANMU UNTUK INDONESIA.
+          TEMUKAN RUANG KARYAMU DI MAHREEN.
         </h2>
 
         {/* 3 Neo-Brutalism Cards */}
@@ -717,10 +687,10 @@ const Slide3 = () => {
               className="w-full bg-[#EFE8D8] border-[3px] border-black rounded-xl py-10 px-6 md:py-12 md:px-8 flex flex-col items-start cursor-pointer shadow-[6px_6px_0px_#000]"
             >
               <div className="text-xs md:text-sm font-bold tracking-widest text-gray-500 uppercase mb-4 font-sans">
-                01 / DIGITAL & KREATIF
+                01 / KREATIF & TEKNOLOGI
               </div>
               <div className="text-lg md:text-xl lg:text-2xl font-black text-black uppercase leading-tight" style={{ fontFamily: "'Titan One', cursive, sans-serif" }}>
-                KREASI KONTEN, TEKNOLOGI, DAN MEDIA BARU.
+                EKSPLORASI WEBSITE, DESAIN GRAFIS, DAN PRODUKSI KONTEN MEDIA DIGITAL.
               </div>
             </motion.div>
           </div>
@@ -736,10 +706,10 @@ const Slide3 = () => {
               className="w-full bg-[#EFE8D8] border-[3px] border-black rounded-xl py-10 px-6 md:py-12 md:px-8 flex flex-col items-start cursor-pointer shadow-[6px_6px_0px_#000]"
             >
               <div className="text-xs md:text-sm font-bold tracking-widest text-gray-500 uppercase mb-4 font-sans">
-                02 / BISNIS & TALENTA
+                02 / TALENTA & BISNIS
               </div>
               <div className="text-lg md:text-xl lg:text-2xl font-black text-black uppercase leading-tight" style={{ fontFamily: "'Titan One', cursive, sans-serif" }}>
-                PENGEMBANGAN INOVASI DAN RINTISAN USAHA.
+                ASAH KEMAMPUAN, BANGUN PORTOFOLIO, DAN TERLIBAT PROYEK BISNIS NYATA.
               </div>
             </motion.div>
           </div>
@@ -755,10 +725,10 @@ const Slide3 = () => {
               className="w-full bg-[#EFE8D8] border-[3px] border-black rounded-xl py-10 px-6 md:py-12 md:px-8 flex flex-col items-start cursor-pointer shadow-[6px_6px_0px_#000]"
             >
               <div className="text-xs md:text-sm font-bold tracking-widest text-gray-500 uppercase mb-4 font-sans">
-                03 / DAMPAK SOSIAL
+                03 / KOMUNITAS & SOSIAL
               </div>
               <div className="text-lg md:text-xl lg:text-2xl font-black text-black uppercase leading-tight" style={{ fontFamily: "'Titan One', cursive, sans-serif" }}>
-                GERAKAN KOMUNITAS DAN AKSI SOSIAL NYATA.
+                IKUTI KEGIATAN EDUKASI, EVENT KOMUNITAS, DAN GERAKAN SOSIAL BERKELANJUTAN.
               </div>
             </motion.div>
           </div>
@@ -775,33 +745,33 @@ const Slide3 = () => {
 const cardsData = [
   {
     id: 'c1',
-    category: 'STUDI KASUS 01\nMEDIA KREATIF',
-    headline: '1 IDE.\n1 KONTEN.\n100K AUDIENS TERGERAK.',
+    category: 'LANGKAH 01\nSATU IDE',
+    headline: 'MULAI DARI GAGASAN LOKAL YANG RELEVAN.',
     bg: '#FF7597',
-    detailCategory: 'CATATAN EKSEKUSI / 01',
-    detailTitle: 'DIBUAT DALAM 3 HARI. DITONTON 100K+ KALI.',
-    detailText: 'Kita nggak butuh tim produksi raksasa atau sewa agensi mahal. Modalnya cuma satu ide berani, riset keresahan audiens selama 2 hari, dan eksekusi visual yang langsung nendang di feed. Hasilnya? Konten bergerak organik, ribuan komentar masuk, dan bukti bahwa pesan yang jujur selalu nemu jalannya sendiri.',
-    detailFooter: 'BIAYA IKLAN: RP 0 · TIM KREATIF: 2 ORANG'
+    detailCategory: 'PROSES / 01',
+    detailTitle: 'MENANGKAP KEBUTUHAN DI SEKITAR KITA.',
+    detailText: 'Kamu tidak perlu menunggu ide revolusioner yang rumit. Bersama mentor dan jaringan Mahreen, identifikasi masalah riil UMKM, brand lokal, atau komunitas sekitar untuk dijadikan rancangan proyek nyata.',
+    detailFooter: 'FOKUS: RISET KEBUTUHAN · VALIDASI GAGASAN'
   },
   {
     id: 'c2',
-    category: 'STUDI KASUS 02\nPENGEMBANGAN TALENTA',
-    headline: 'DARI TUGAS KULIAH\nJADI PRODUK DILIRIK INVESTOR.',
+    category: 'LANGKAH 02\nSATU KARYA',
+    headline: 'DIEKSEKUSI LEWAT KOLABORASI LINTAS DIVISI.',
     bg: '#CCFF00',
-    detailCategory: 'CATATAN EKSEKUSI / 02',
-    detailTitle: 'BUKAN MAGANG FOTOKOPI DAN BIKIN KOPI.',
-    detailText: 'Dari hari pertama, anak-anak magang langsung pegang data riil dan ambil keputusan. Validasi pasar langsung ke pengguna, bedah masalah operasional, dan uji coba produk langsung di lapangan. Pengalaman kerja nyata nggak bisa dipelajari dari teori buku teks.',
-    detailFooter: 'HASIL: 1 PRODUK TERVALIDASI DI PASAR'
+    detailCategory: 'PROSES / 02',
+    detailTitle: 'MENGUBAH RANCANGAN JADI PRODUK FUNGSIONAL.',
+    detailText: 'Hubungkan keahlianmu dengan desainer, developer, kreator konten, dan tim riset bisnis Mahreen. Kerjakan solusi digital dan aset kreatif yang terstruktur sesuai standar industri.',
+    detailFooter: 'EKSEKUSI: WEBSITE · KONTEN KREATIF · DESAIN'
   },
   {
     id: 'c3',
-    category: 'STUDI KASUS 03\nGERAKAN KOMUNITAS',
-    headline: '50 VOLUNTEER.\n5 KOTA.\n1 GERAKAN NYATA.',
+    category: 'LANGKAH 03\nSATU DAMPAK',
+    headline: 'MENGHASILKAN NILAI NYATA DAN PORTOFOLIO KUAT.',
     bg: '#FFFFFF',
-    detailCategory: 'CATATAN EKSEKUSI / 03',
-    detailTitle: '1 GERAKAN. 5 KOTA. BERGERAK SERENTAK.',
-    detailText: 'Nggak ada rapat birokrasi bertele-tele. Semua berawal dari grup obrolan singkat yang diterjemahkan jadi aksi nyata di 5 titik. Relawan turun bukan untuk formalitas foto bersama, tapi memastikan program benar-benar dirasakan manfaatnya oleh warga sekitar.',
-    detailFooter: 'STATUS: AKSI SELESAI · DAMPAK TERUKUR'
+    detailCategory: 'PROSES / 03',
+    detailTitle: 'KARYA DIPERGUNAKAN, TALENTA DIAKUI.',
+    detailText: 'Karya yang selesai bukan pajangan internal. Hasil kerja dirasakan langsung oleh mitra, dipublikasikan secara profesional, serta memperkuat portofolio kariermu di masa depan.',
+    detailFooter: 'OUTPUT: PORTOFOLIO NYATA · DAMPAK SOSIAL & BISNIS'
   }
 ];
 
@@ -934,7 +904,7 @@ const Slide4 = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Project Detail Drawer */}
       <AnimatePresence>
         {isDetailOpen && (
@@ -948,7 +918,7 @@ const Slide4 = () => {
               className="fixed inset-0 bg-black/60 z-50 backdrop-blur-[1px]"
               onClick={() => setIsDetailOpen(false)}
             />
-            
+
             {/* Drawer Wrapper */}
             <motion.div
               initial={{ x: "100%", y: "20%" }}
@@ -958,8 +928,8 @@ const Slide4 = () => {
               className="fixed top-0 right-0 h-full w-[90vw] sm:w-[48vw] md:w-[34vw] lg:w-[30vw] z-50 pointer-events-auto"
             >
               {/* Floating Side Trigger (Close) */}
-              <button 
-                onClick={() => setIsDetailOpen(false)} 
+              <button
+                onClick={() => setIsDetailOpen(false)}
                 className="absolute -left-14 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-[#D2FF00] border-2 border-black shadow-[2px_2px_0px_#000] flex items-center justify-center font-black text-xl hover:scale-105 transition-transform z-50"
               >
                 ✕
@@ -1016,40 +986,40 @@ const Slide5 = () => {
       className="h-screen w-screen max-h-screen overflow-hidden flex flex-col justify-between items-center py-8 px-12 relative text-[#111827] selection:bg-[#E9FF32] selection:text-black bg-[#FF7597]"
     >
       <div className="flex-grow flex flex-col justify-center items-center w-full z-10 px-4">
-        
+
         {/* Restored Mini Logo Above Card */}
         <div className="relative flex justify-center scale-[0.55] origin-top h-[60px] mb-6 md:mb-8 mt-4">
-            <div className="absolute top-0 left-0 right-0 flex justify-center z-0">
-              {letters.map((char, i) => (
-                <span key={`mini-bg-${i}`} style={{ transform: `translateY(${yOffsets[i]}px) rotate(${baseRotations[i]}deg)`, fontFamily: "'Titan One', cursive, sans-serif", WebkitTextStroke: "6px black", textShadow: stickerShadow, color: "black" }} className="text-[5vw] md:text-[3vw] leading-none uppercase origin-bottom">{char}</span>
-              ))}
-            </div>
-            <div className="relative flex justify-center z-10">
-              {letters.map((char, i) => (
-                <span key={`mini-fg-${i}`} style={{ transform: `translateY(${yOffsets[i]}px) rotate(${baseRotations[i]}deg)`, fontFamily: "'Titan One', cursive, sans-serif", WebkitTextStroke: "1.5px black", color: "white" }} className="text-[5vw] md:text-[3vw] leading-none uppercase origin-bottom">{char}</span>
-              ))}
-            </div>
+          <div className="absolute top-0 left-0 right-0 flex justify-center z-0">
+            {letters.map((char, i) => (
+              <span key={`mini-bg-${i}`} style={{ transform: `translateY(${yOffsets[i]}px) rotate(${baseRotations[i]}deg)`, fontFamily: "'Titan One', cursive, sans-serif", WebkitTextStroke: "6px black", textShadow: stickerShadow, color: "black" }} className="text-[5vw] md:text-[3vw] leading-none uppercase origin-bottom">{char}</span>
+            ))}
+          </div>
+          <div className="relative flex justify-center z-10">
+            {letters.map((char, i) => (
+              <span key={`mini-fg-${i}`} style={{ transform: `translateY(${yOffsets[i]}px) rotate(${baseRotations[i]}deg)`, fontFamily: "'Titan One', cursive, sans-serif", WebkitTextStroke: "1.5px black", color: "white" }} className="text-[5vw] md:text-[3vw] leading-none uppercase origin-bottom">{char}</span>
+            ))}
+          </div>
         </div>
 
         {/* The Action Card (Neo-Brutalist) */}
         <div className="w-[84vw] md:w-[60vw] max-w-3xl h-auto bg-[#EFE8D8] border-[3.5px] border-black rounded-2xl shadow-[6px_6px_0px_#000] py-6 md:py-8 px-6 md:px-12 flex flex-col items-center justify-center text-center mb-20 md:mb-24 -translate-y-8 md:-translate-y-12">
-          
+
           {/* Tag Atas */}
           <div className="mb-4">
             <span className="text-[11px] font-bold tracking-widest uppercase bg-black text-[#D2FF00] px-3 py-1 border border-black inline-block">
-              MAHREEN BATCH 02 · SELEKSI KARYA
+              BERKARYA UNTUK INDONESIA
             </span>
           </div>
 
           {/* Headline Utama */}
           <h2 className="text-2xl md:text-4xl font-black uppercase text-center leading-tight mb-4 text-black" style={{ fontFamily: "'Titan One', cursive, sans-serif" }}>
-            KAMI TIDAK CARI PENONTON.<br />
-            KAMI CARI EKSEKUTOR.
+            SAATNYA GAGASANMU BERGERAK<br />
+            JADI KARYA NYATA.
           </h2>
 
           {/* Sub-teks Realistis */}
           <p className="text-base md:text-xl lg:text-2xl font-bold text-black mt-5 md:mt-6 max-w-2xl text-center leading-snug mb-2">
-            Tiga bulan pembuktian langsung di lapangan. Ruang kerja nyata untuk kamu yang siap berkarya untuk Indonesia.
+            Jangan biarkan kemampuanmu hanya tersimpan di catatan. Bergabunglah dengan ekosistem Mahreen Indonesia dan mulai ambil bagian.
           </p>
 
           {/* Call to Action Button */}
@@ -1058,10 +1028,10 @@ const Slide5 = () => {
               onClick={() => setShowModal(true)}
               className="px-8 py-3.5 bg-[#D2FF00] hover:bg-[#bceb00] text-black font-black text-sm md:text-base tracking-wider uppercase border-[2.5px] border-black rounded-xl shadow-[3px_3px_0px_#000] hover:-translate-y-1 hover:shadow-[3px_5px_0px_#000] transition-all cursor-pointer"
             >
-              AMBIL TANTANGAN SEKARANG
+              MULAI BERKARYA BERSAMA MAHREEN
             </button>
           </div>
-          
+
         </div>
       </div>
 
@@ -1089,9 +1059,9 @@ const Slide5 = () => {
               >
                 ×
               </button>
-              <h3 className="font-black text-2xl mb-4 uppercase" style={{ fontFamily: "'Titan One', cursive, sans-serif" }}>Panggilan Diterima!</h3>
+              <h3 className="font-black text-2xl mb-4 uppercase" style={{ fontFamily: "'Titan One', cursive, sans-serif" }}>Langkah Awal Dimulai!</h3>
               <p className="font-bold text-lg leading-relaxed font-sans text-gray-800">
-                Terima kasih telah mengambil peran! Mari berkarya nyata untuk Indonesia bersama Mahreen Batch 2.
+                Terima kasih! Kamu selangkah lebih dekat untuk menciptakan karya berdampak nyata bersama Mahreen Indonesia.
               </p>
             </motion.div>
           </motion.div>
@@ -1115,12 +1085,22 @@ export default function App() {
   const cardRefs = useRef([]);
 
   const [isMuted, setIsMuted] = useState(true);
+  const userHasToggledMute = useRef(false);
+
+  // --- Pull to Scroll / Scroll to Next Implementation ---
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const scrollTimeoutRef = useRef(null);
+  const currentScrollDelta = useRef(0);
+  const touchStartY = useRef(0);
+  const isScrollTriggered = useRef(false);
 
   // Initialize BGM and unmute on first interaction
   useEffect(() => {
     const handleFirstClick = () => {
-      setIsMuted(false);
-      setGlobalMute(false);
+      if (!userHasToggledMute.current) {
+        setIsMuted(false);
+        setGlobalMute(false);
+      }
 
       // Unlock all Audio instances on first user interaction to bypass Autoplay Policy
       if (typeof window !== 'undefined') {
@@ -1238,6 +1218,94 @@ export default function App() {
     if (currentSlide > 1) executeTransition(currentSlide - 1);
   };
 
+  const handleNextRef = useRef(handleNext);
+  useEffect(() => { handleNextRef.current = handleNext; });
+
+  // Auto-reset scroll progress if user stops halfway
+  useEffect(() => {
+    if (scrollProgress > 0 && scrollProgress < 100 && !isScrollTriggered.current) {
+      const timer = setTimeout(() => {
+        setScrollProgress(0);
+        currentScrollDelta.current = 0;
+      }, 350);
+      return () => clearTimeout(timer);
+    }
+  }, [scrollProgress]);
+
+  useEffect(() => {
+    const SCROLL_THRESHOLD = 500;
+    const TOUCH_THRESHOLD = 150;
+
+    const handleWheel = (e) => {
+      if (isTransitioning || currentSlide === 6 || isSlidesOpen || isScrollTriggered.current) return;
+      if (e.deltaY > 0) {
+        currentScrollDelta.current += e.deltaY;
+        const progress = Math.min((currentScrollDelta.current / SCROLL_THRESHOLD) * 100, 100);
+        setScrollProgress(progress);
+
+        if (progress >= 100) {
+          isScrollTriggered.current = true;
+          currentScrollDelta.current = 0;
+          setTimeout(() => {
+            handleNextRef.current();
+            setTimeout(() => {
+              setScrollProgress(0);
+              isScrollTriggered.current = false;
+            }, 300);
+          }, 400); // 400ms delay so user can see "LET'S GO!"
+        }
+      }
+    };
+
+    const handleTouchStart = (e) => {
+      touchStartY.current = e.touches[0].clientY;
+    };
+
+    const handleTouchMove = (e) => {
+      if (isTransitioning || currentSlide === 6 || isSlidesOpen || isScrollTriggered.current) return;
+      const touchY = e.touches[0].clientY;
+      const deltaY = touchStartY.current - touchY;
+      
+      if (deltaY > 0) {
+        const progress = Math.min((deltaY / TOUCH_THRESHOLD) * 100, 100);
+        setScrollProgress(progress);
+        
+        if (progress >= 100) {
+           isScrollTriggered.current = true;
+           touchStartY.current = touchY;
+           setTimeout(() => {
+             handleNextRef.current();
+             setTimeout(() => {
+               setScrollProgress(0);
+               isScrollTriggered.current = false;
+             }, 300);
+           }, 400);
+        }
+      } else if (!isScrollTriggered.current) {
+         setScrollProgress(0);
+      }
+    };
+
+    const handleTouchEnd = () => {
+       if (!isScrollTriggered.current) {
+         setScrollProgress(0);
+         currentScrollDelta.current = 0;
+       }
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: true });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd);
+    
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [currentSlide, isTransitioning, isSlidesOpen]);
+
   return (
     <>
       <AnimatePresence>
@@ -1258,6 +1326,32 @@ export default function App() {
       {currentSlide === 4 && <Slide4 />}
       {currentSlide === 5 && <Slide5 />}
       {currentSlide === 6 && <Slide6 onReset={() => executeTransition(1)} />}
+
+      {/* Scroll Indicator */}
+      {scrollProgress > 0 && currentSlide !== 6 && !isSlidesOpen && (
+        <div className="fixed bottom-32 md:bottom-40 left-1/2 -translate-x-1/2 z-[100] pointer-events-none">
+          <div className="bg-[#EFE8D8] border-[1.5px] border-black rounded-2xl px-6 py-4 flex flex-col items-center justify-center transition-all duration-150">
+            <span className="font-medium text-black text-sm md:text-base tracking-widest mb-3 uppercase font-sans">
+              {scrollProgress >= 100 ? "LET'S GO!" : "NEXT SLIDE"}
+            </span>
+            
+            {scrollProgress >= 100 ? (
+              <div className="w-8 h-8 rounded-full border-[1.5px] border-black flex items-center justify-center">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </div>
+            ) : (
+              <div className="relative w-8 h-8 flex items-center justify-center">
+                <svg className="w-full h-full transform -rotate-90" viewBox="0 0 32 32">
+                  <circle cx="16" cy="16" r="13" stroke="rgba(0,0,0,0.15)" strokeWidth="1.5" fill="none" />
+                  <circle cx="16" cy="16" r="13" stroke="black" strokeWidth="1.5" fill="none" strokeDasharray="81.68" strokeDashoffset={81.68 * (1 - scrollProgress / 100)} strokeLinecap="round" className="transition-all duration-75" />
+                </svg>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* GLOBAL Bottom Navigation Bar */}
       {!isTransitioning && currentSlide !== 6 && (
@@ -1306,6 +1400,7 @@ export default function App() {
               <button
                 onClick={(e) => {
                   e.stopPropagation();
+                  userHasToggledMute.current = true;
                   const newMute = !isMuted;
                   setIsMuted(newMute);
                   setGlobalMute(newMute);

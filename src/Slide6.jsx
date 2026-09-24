@@ -50,14 +50,14 @@ const Slide6 = ({ onReset }) => {
                 PRESENTASI SELESAI.
               </h2>
               <h3 className="tracking-wide text-xl md:text-3xl font-black text-neutral-800 uppercase leading-tight mt-2" style={{ fontFamily: "'Titan One', cursive, sans-serif" }}>
-                SAATNYA EKSEKUSI NYATA.
+                SAATNYA MEMULAI EKSEKUSI.
               </h3>
             </div>
             <button
               onClick={onReset}
               className="px-6 py-2.5 bg-white text-black font-black text-xs uppercase tracking-wider border-2 border-black rounded-lg shadow-[3px_3px_0px_#000] hover:bg-neutral-100 hover:scale-105 active:translate-x-1 active:translate-y-1 transition-all cursor-pointer"
             >
-              KEMBALI KE AWAL
+              EKSPLORASI DARI AWAL
             </button>
           </motion.div>
         )}
@@ -154,8 +154,8 @@ const Slide6 = ({ onReset }) => {
 
       {/* Footer Minimalis */}
       <div className="w-full flex justify-between items-end pb-2 font-bold text-[10px] md:text-xs font-sans tracking-widest text-black/60 uppercase z-50 pointer-events-none">
-        <div>©2026 MAHREEN INDONESIA | CREATIVE CHALLENGE</div>
-        <div>KARYA UNTUK INDONESIA</div>
+        <div>©2026 MAHREEN INDONESIA</div>
+        <div>BERKARYA UNTUK INDONESIA</div>
       </div>
     </div>
   );

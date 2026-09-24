@@ -8,9 +8,25 @@
 }
 
 
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background-color: #FF8FA3;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  position: fixed;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 @keyframes smoothWaveFloat {
